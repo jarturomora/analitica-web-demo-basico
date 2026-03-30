@@ -1,54 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <title>Demo básica GTM y GA4</title>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-97T1H2Z6CN"
-  ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastelería Sin Gluten - Contacto</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-97T1H2Z6CN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-97T1H2Z6CN');
+</script>
+<body>  
+  <header>
+    <h1>Pastelería Sin Gluten</h1>
+    <p>Déjanos tus datos y te avisaremos de nuestra apertura y novedades</p>
+  </header>
+
+  <main>
+    <h2>Formulario de contacto</h2>
+    <p>
+      Estamos preparando una nueva pastelería especializada en productos gluten free.
+      Si quieres recibir información sobre nuestra apertura, promociones y novedades,
+      completa este formulario.
+    </p>
+
+    <form id="formulario-contacto">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" />
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" />
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="notificaciones" name="notificaciones" />
+        <label for="notificaciones">Quiero recibir notificaciones y novedades</label>
+      </div>
+
+      <button type="submit" id="boton-enviar">Enviar formulario</button>
+    </form>
+  </main>
+
+  <footer>
+    Demo educativa para introducir GTM y GA4
+  </footer>
+
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-97T1H2Z6CN");
+    document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Formulario enviado en la demo.");
+    });
   </script>
-  <body>
-    <header>
-      <h1>Demo básica de Google Tag Manager y GA4</h1>
-      <p>Ejemplo sencillo para entender cómo se instrumenta una página web</p>
-    </header>
-
-    <main>
-      <h2>Página de ejemplo</h2>
-      <p>
-        Esta página está diseñada para mostrar una implementación mínima de
-        analítica web. Primero cargamos Google Tag Manager desde el HTML y
-        después configuramos en GTM la etiqueta de Google Analytics 4 y un
-        evento de clic.
-      </p>
-
-      <button id="boton-demo" class="boton-principal">Haz clic aquí</button>
-
-      <p>También puedes usar este enlace como elemento adicional de pruebas:</p>
-
-      <a
-        href="https://www.google.com"
-        target="_blank"
-        class="enlace-demo"
-        id="enlace-demo"
-      >
-        Ir a un sitio externo
-      </a>
-    </main>
-
-    <footer>Demo educativa para introducir GTM y GA4</footer>
-  </body>
+</body>
 </html>
