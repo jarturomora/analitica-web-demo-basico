@@ -1,57 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/styles.css" />
-  <title>Demo básica GTM y GA4</title>
-
-  <!-- Google Tag Manager -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>Demo básica GTM y GA4</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-97T1H2Z6CN"
+  ></script>
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-97T1H2Z6CN");
   </script>
-  <!-- End Google Tag Manager -->
-</head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <body>
+    <header>
+      <h1>Demo básica de Google Tag Manager y GA4</h1>
+      <p>Ejemplo sencillo para entender cómo se instrumenta una página web</p>
+    </header>
 
-  <header>
-    <h1>Demo básica de Google Tag Manager y GA4</h1>
-    <p>Ejemplo sencillo para entender cómo se instrumenta una página web</p>
-  </header>
+    <main>
+      <h2>Página de ejemplo</h2>
+      <p>
+        Esta página está diseñada para mostrar una implementación mínima de
+        analítica web. Primero cargamos Google Tag Manager desde el HTML y
+        después configuramos en GTM la etiqueta de Google Analytics 4 y un
+        evento de clic.
+      </p>
 
-  <main>
-    <h2>Página de ejemplo</h2>
-    <p>
-      Esta página está diseñada para mostrar una implementación mínima de analítica web.
-      Primero cargamos Google Tag Manager desde el HTML y después configuramos
-      en GTM la etiqueta de Google Analytics 4 y un evento de clic.
-    </p>
+      <button id="boton-demo" class="boton-principal">Haz clic aquí</button>
 
-    <button id="boton-demo" class="boton-principal">
-      Haz clic aquí
-    </button>
+      <p>También puedes usar este enlace como elemento adicional de pruebas:</p>
 
-    <p>
-      También puedes usar este enlace como elemento adicional de pruebas:
-    </p>
+      <a
+        href="https://www.google.com"
+        target="_blank"
+        class="enlace-demo"
+        id="enlace-demo"
+      >
+        Ir a un sitio externo
+      </a>
+    </main>
 
-    <a href="https://www.google.com" target="_blank" class="enlace-demo" id="enlace-demo">
-      Ir a un sitio externo
-    </a>
-  </main>
-
-  <footer>
-    Demo educativa para introducir GTM y GA4
-  </footer>
-</body>
+    <footer>Demo educativa para introducir GTM y GA4</footer>
+  </body>
 </html>
