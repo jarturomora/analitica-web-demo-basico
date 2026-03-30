@@ -1,65 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pastelería Sin Gluten - Contacto</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M6WW5BGQ');</script>
-  <!-- End Google Tag Manager -->
-</head>
-</script>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6WW5BGQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <header>
-    <h1>Pastelería Sin Gluten</h1>
-    <p>Déjanos tus datos y te avisaremos de nuestra apertura y novedades</p>
-  </header>
-  <main>
-    <h2>Formulario de contacto</h2>
-    <p>
-      Estamos preparando una nueva pastelería especializada en productos gluten free.
-      Si quieres recibir información sobre nuestra apertura, promociones y novedades,
-      completa este formulario.
-    </p>
-
-    <form id="formulario-contacto">
-      <div class="campo">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" />
-      </div>
-
-      <div class="campo">
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" />
-      </div>
-
-      <div class="checkbox">
-        <input type="checkbox" id="notificaciones" name="notificaciones" />
-        <label for="notificaciones">Quiero recibir notificaciones y novedades</label>
-      </div>
-
-      <button type="submit" id="boton-enviar">Enviar formulario</button>
-    </form>
-  </main>
-
-  <footer>
-    Demo educativa para introducir GTM y GA4
-  </footer>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pastelería Sin Gluten - Contacto</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M6WW5BGQ");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-97T1H2Z6CN"
+  ></script>
   <script>
-    document.getElementById("formulario-contacto").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Formulario enviado en la demo.");
-    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-97T1H2Z6CN");
   </script>
-</body>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M6WW5BGQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+      <h1>Pastelería Sin Gluten</h1>
+      <p>Déjanos tus datos y te avisaremos de nuestra apertura y novedades</p>
+    </header>
+    <main>
+      <h2>Formulario de contacto</h2>
+      <p>
+        Estamos preparando una nueva pastelería especializada en productos
+        gluten free. Si quieres recibir información sobre nuestra apertura,
+        promociones y novedades, completa este formulario.
+      </p>
+
+      <form id="formulario-contacto">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escribe tu nombre"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="correo@ejemplo.com"
+          />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="notificaciones" name="notificaciones" />
+          <label for="notificaciones"
+            >Quiero recibir notificaciones y novedades</label
+          >
+        </div>
+
+        <button type="submit" id="boton-enviar">Enviar formulario</button>
+      </form>
+    </main>
+
+    <footer>Demo educativa para introducir GTM y GA4</footer>
+
+    <script>
+      document
+        .getElementById("formulario-contacto")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Formulario enviado en la demo.");
+        });
+    </script>
+  </body>
 </html>
