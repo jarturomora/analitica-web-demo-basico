@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Pasteleria Sin Gluten</title>
+    <meta
+      name="description"
+      content="Solicita informacion, encargos o novedades de Pasteleria Sin Gluten a traves del formulario de contacto."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/site.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">Pasteleria Sin Gluten</span>
+          <span class="brand-subtitle">Obrador artesanal y encargos por temporada</span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html">Catalogo</a>
+          <a href="quienes-somos.html">Quienes somos</a>
+          <a href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero compact">
+        <div class="container">
+          <span class="eyebrow">Formulario de contacto</span>
+          <h1>Cuentanos que necesitas y te ayudamos a prepararlo.</h1>
+          <p>
+            Escribenos si quieres hacer un encargo, consultar ingredientes o
+            recibir informacion sobre disponibilidad y pedidos especiales.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container split">
+          <aside class="contact-panel">
+            <span class="tag">Canales de atencion</span>
+            <h2>Te ayudamos a preparar el pedido perfecto</h2>
+            <p>
+              Puedes usar el formulario para encargos, informacion sobre
+              ingredientes, disponibilidad de temporada o colaboraciones.
+            </p>
+            <ul class="contact-list">
+              <li>Respuesta estimada en 24 horas laborables.</li>
+              <li>Pedidos especiales bajo consulta previa.</li>
+              <li>Confirmacion personalizada para eventos y celebraciones.</li>
+            </ul>
+          </aside>
+
+          <div class="form-shell">
+            <form data-form-type="contacto" data-success-message="Gracias. Hemos recibido tu solicitud y te responderemos pronto.">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="field">
+                  <label for="correo">Correo electronico</label>
+                  <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required />
+                </div>
+                <div class="field">
+                  <label for="telefono">Telefono</label>
+                  <input id="telefono" name="telefono" type="tel" placeholder="600 000 000" />
+                </div>
+                <div class="field">
+                  <label for="motivo">Motivo de contacto</label>
+                  <select id="motivo" name="motivo">
+                    <option value="encargo">Encargo personalizado</option>
+                    <option value="catalogo">Consulta sobre productos</option>
+                    <option value="evento">Pedido para evento</option>
+                    <option value="novedades">Suscripcion a novedades</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" placeholder="Cuentanos que producto te interesa o que necesitas."></textarea>
+                </div>
+                <div class="field full">
+                  <label class="checkbox" for="consentimiento">
+                    <input id="consentimiento" name="consentimiento" type="checkbox" required />
+                    <span>Acepto que se usen mis datos para responder a esta solicitud.</span>
+                  </label>
+                </div>
+              </div>
+              <div class="hero-actions">
+                <button type="submit">Enviar formulario</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Estamos aqui para ayudarte con encargos, dudas y celebraciones.</span>
+        <span><a href="catalogo.html">Volver al catalogo</a></span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -12,3 +12,16 @@ Archivos principales:
 
 - `index.html`: página principal de la demo. Representa una landing de una pastelería sin gluten con un formulario de contacto. Incluye scripts de GTM y GA4, por lo que resulta útil para practicar la carga de etiquetas, la inspección del `dataLayer` y el seguimiento de interacciones básicas.
 - `assets/`: carpeta que agrupa los recursos estáticos asociados a esta demo.
+
+### `demo-analisis-activacion/`
+
+Contiene una demo web más completa basada en la misma pastelería sin gluten, pensada para trabajar recorridos de navegación, interés por producto y formularios de contacto.
+
+Archivos principales:
+
+- `index.html`: página principal del sitio.
+- `catalogo.html`: catálogo con cinco productos.
+- `quienes-somos.html`: página de presentación del obrador.
+- `contacto.html`: página con formulario de contacto.
+- `productos/`: fichas individuales de los cinco productos.
+- `assets/`: estilos, script del sitio e imágenes de producto.
