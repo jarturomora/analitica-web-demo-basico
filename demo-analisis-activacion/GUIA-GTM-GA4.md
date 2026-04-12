@@ -153,18 +153,19 @@ Para crear cada una de estas etiquetas en GTM, el procedimiento general es el si
 
 Por ejemplo, para `view_product`, la etiqueta debería recoger el evento `view_product`, dispararse con el activador `view_product` y enviar como parámetros `product_name` y `page_path`.
 
-Además, conviene asociar los parámetros cuando tenga sentido:
+La siguiente tabla resume una configuración clara y coherente para esta demo:
 
-- `page_path` → `{{page_path}}`
-- `product_name` → `{{product_name}}`
-- `placement` → `{{placement}}`
-- `form_type` → `{{form_type}}`
+| Nombre de la etiqueta en GTM | Nombre del evento en GA4 | Activador (`Custom Event`) | Parámetros recomendados |
+| --- | --- | --- | --- |
+| `view_catalog` | `view_catalog` | `view_catalog` | `page_path` → `{{page_path}}` |
+| `about_view` | `about_view` | `about_view` | `page_path` → `{{page_path}}` |
+| `view_contact` | `view_contact` | `view_contact` | `page_path` → `{{page_path}}` |
+| `view_product` | `view_product` | `view_product` | `product_name` → `{{product_name}}`<br>`page_path` → `{{page_path}}` |
+| `product_interest` | `product_interest` | `product_interest` | `product_name` → `{{product_name}}`<br>`placement` → `{{placement}}`<br>`page_path` → `{{page_path}}` |
+| `form_start` | `form_start` | `form_start` | `form_type` → `{{form_type}}`<br>`page_path` → `{{page_path}}` |
+| `form_submit` | `form_submit` | `form_submit` | `form_type` → `{{form_type}}`<br>`page_path` → `{{page_path}}` |
 
-Por ejemplo:
-
-- en `view_product`, tiene sentido enviar `product_name` y `page_path`;
-- en `product_interest`, resulta útil enviar `product_name`, `placement` y `page_path`;
-- en `form_start` y `form_submit`, conviene enviar `form_type` y `page_path`.
+En esta práctica, una forma sencilla de trabajar es dar a la etiqueta el mismo nombre que al evento. No es obligatorio, pero ayuda a reducir errores y hace más fácil seguir la configuración durante la clase.
 
 ## Paso 9. Validar la implementación en modo Preview
 
