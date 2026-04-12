@@ -91,12 +91,21 @@ Para recoger los parámetros que acompañan a los eventos, conviene crear variab
 
 Las variables recomendadas son:
 
-- `DLV - product_name`
-- `DLV - form_type`
-- `DLV - placement`
-- `DLV - page_path`
+- `product_name`
+- `form_type`
+- `placement`
+- `page_path`
 
 Cada una debe apuntar exactamente a la clave correspondiente dentro del `dataLayer`.
+
+No es obligatorio añadir un prefijo como `DLV -` al nombre de la variable. A veces puede ayudar a identificar el tipo de variable dentro de GTM, pero en una práctica como esta también puede añadir ruido innecesario. Si quieres simplificar la configuración para el alumnado, resulta perfectamente válido nombrarlas solo con la clave que van a recoger.
+
+La lógica de cada variable es la siguiente:
+
+- `product_name`: recoge el nombre del producto cuando el usuario entra en una ficha o hace clic en un enlace de producto.
+- `form_type`: identifica el formulario con el que se está interactuando. En esta demo permite saber que el evento procede del formulario de contacto.
+- `placement`: indica desde qué ubicación se hizo clic en un producto. En este caso sirve para distinguir, por ejemplo, un clic realizado desde la rejilla del catálogo.
+- `page_path`: recoge la ruta de la página en la que ocurre el evento y ayuda a contextualizar la interacción.
 
 Este paso es importante porque permite que la medición no se limite al nombre del evento, sino que incorpore información adicional útil para interpretar mejor el comportamiento.
 
@@ -116,9 +125,11 @@ Debes crear un activador `Custom Event` para:
 
 El nombre del activador debe coincidir exactamente con el nombre enviado en el `dataLayer`.
 
-## Paso 8. Crear las etiquetas de evento en GA4
+## Paso 8. Crear las etiquetas de evento de GA4 en GTM
 
-Cuando los activadores ya están disponibles, se pueden crear las etiquetas de evento de GA4 correspondientes.
+Cuando los activadores ya están disponibles, el siguiente paso consiste en crear en Google Tag Manager las etiquetas de evento de GA4 correspondientes.
+
+Es importante subrayar este matiz: las etiquetas no se crean directamente dentro de GA4, sino en GTM. GA4 será la herramienta que reciba los eventos, los muestre en sus informes y permita después interpretarlos o marcarlos como conversión.
 
 Se recomienda configurar al menos estas etiquetas:
 
@@ -130,12 +141,24 @@ Se recomienda configurar al menos estas etiquetas:
 - `form_start`
 - `form_submit`
 
+Para crear cada una de estas etiquetas en GTM, el procedimiento general es el siguiente:
+
+1. crear una nueva etiqueta;
+2. elegir el tipo `Google Analytics: evento de GA4` o la opción equivalente disponible en la interfaz actual;
+3. seleccionar como etiqueta de configuración la etiqueta base de GA4 que creaste anteriormente, o introducir el identificador de medición si la interfaz te lo pide;
+4. escribir exactamente el nombre del evento, por ejemplo `view_product` o `form_submit`;
+5. añadir los parámetros que correspondan a ese evento;
+6. asignar como activador el `Custom Event` con el mismo nombre;
+7. guardar la etiqueta.
+
+Por ejemplo, para `view_product`, la etiqueta debería recoger el evento `view_product`, dispararse con el activador `view_product` y enviar como parámetros `product_name` y `page_path`.
+
 Además, conviene asociar los parámetros cuando tenga sentido:
 
-- `page_path` → `{{DLV - page_path}}`
-- `product_name` → `{{DLV - product_name}}`
-- `placement` → `{{DLV - placement}}`
-- `form_type` → `{{DLV - form_type}}`
+- `page_path` → `{{page_path}}`
+- `product_name` → `{{product_name}}`
+- `placement` → `{{placement}}`
+- `form_type` → `{{form_type}}`
 
 Por ejemplo:
 
@@ -185,6 +208,8 @@ En una sesión de prueba, el orden habitual de algunos eventos puede ser este:
 4. `view_contact`
 5. `form_start`
 6. `form_submit`
+
+Conviene señalar un matiz importante: al entrar en `index.html` no se dispara ningún evento personalizado desde `assets/site.js`. La home queda igualmente medida por la etiqueta base de GA4, pero los eventos personalizados comienzan a aparecer cuando el usuario entra en páginas como catálogo, contacto, quiénes somos o una ficha de producto.
 
 ## Paso 11. Marcar la conversión principal
 

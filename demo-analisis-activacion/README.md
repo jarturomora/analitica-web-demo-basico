@@ -64,6 +64,8 @@ Los eventos implementados son los siguientes:
 
 Algunos eventos incluyen además parámetros como `product_name`, `form_type`, `placement` y `page_path`, lo que permite enriquecer posteriormente el análisis en GA4.
 
+Conviene tener en cuenta un matiz importante: la portada no envía un evento personalizado propio desde `assets/site.js`. La página principal queda medida igualmente por la etiqueta base de GA4, pero los eventos personalizados empiezan a generarse cuando el usuario entra en páginas como catálogo, contacto, “Quiénes somos” o una ficha de producto.
+
 ## Propuesta de desarrollo de la práctica
 
 Una secuencia sencilla para desarrollar la demo en clase puede ser esta:
@@ -85,8 +87,9 @@ Para trabajar la demo con Google Tag Manager, se recomienda seguir este proceso:
 1. Crear un contenedor de GTM.
 2. Insertar el código del contenedor en todas las páginas del sitio.
 3. Crear una etiqueta de configuración de GA4.
-4. Crear activadores de tipo `Custom Event` para cada evento del `dataLayer`.
-5. Crear etiquetas de evento de GA4 asociadas a los siguientes eventos:
+4. Crear variables de capa de datos para recoger `product_name`, `form_type`, `placement` y `page_path`.
+5. Crear activadores de tipo `Custom Event` para cada evento del `dataLayer`.
+6. Crear etiquetas de evento de GA4 asociadas a los siguientes eventos:
    - `view_catalog`
    - `about_view`
    - `view_contact`
@@ -94,8 +97,8 @@ Para trabajar la demo con Google Tag Manager, se recomienda seguir este proceso:
    - `product_interest`
    - `form_start`
    - `form_submit`
-6. Verificar los eventos en modo Preview.
-7. Publicar el contenedor una vez validado.
+7. Verificar los eventos en modo Preview.
+8. Publicar el contenedor una vez validado.
 
 ## Pasos recomendados en GA4
 
