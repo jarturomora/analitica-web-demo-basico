@@ -1,4 +1,4 @@
-# Demo de Análisis y Activación con GA4
+# Demo de Análisis y Activación con GTM y GA4
 
 ## Introducción y propósito de la práctica
 
@@ -7,6 +7,8 @@ Esta demo reproduce el caso de una pequeña pastelería sin gluten que quiere ut
 El objetivo de la práctica no consiste únicamente en observar visitas o páginas vistas, sino en utilizar la web como base para formular preguntas de negocio y responderlas mediante una lectura analítica apoyada en Google Tag Manager (GTM) y Google Analytics 4 (GA4).
 
 En otras palabras, esta demo permite trabajar la idea central del tema: disponer de datos no es suficiente; lo verdaderamente valioso es interpretar el comportamiento del usuario para detectar oportunidades de mejora, optimización y activación.
+
+Como complemento a este documento, el archivo `GUIA-GTM-GA4.md` desarrolla con más detalle los pasos técnicos necesarios para conectar la demo con Google Tag Manager y Google Analytics 4.
 
 ## Objetivos de aprendizaje
 

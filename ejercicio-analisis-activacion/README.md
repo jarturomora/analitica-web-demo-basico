@@ -4,6 +4,8 @@
 
 A través de este ejercicio vas a poner en práctica los conceptos fundamentales del tema en un escenario próximo a una situación real de negocio. Trabajarás sobre una landing promocional diseñada para presentar un nuevo producto, profundizar en sus especificaciones y captar usuarios interesados mediante una lista de espera.
 
+Este ejercicio funciona como una extensión autónoma de la demo principal: mantiene la misma lógica de traducir un objetivo comercial a una estructura de medición, pero lo hace sobre un caso distinto para que el estudiante pueda resolverlo por su cuenta.
+
 Con esta actividad se pretende que seas capaz de:
 
 - interpretar cómo un objetivo comercial puede traducirse en una estructura básica de medición;

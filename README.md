@@ -1,6 +1,6 @@
 # Ejemplos Prácticos para Analítica Web
 
-Este repositorio recoge demos sencillas para trabajar conceptos introductorios de analítica web. Cada subdirectorio contiene un ejemplo independiente, pensado para abrirse fácilmente en local y servir como base para prácticas, explicaciones en clase o pequeños ejercicios.
+Este repositorio recoge demos y ejercicios sencillos para trabajar conceptos introductorios de analítica web. Cada subdirectorio contiene un ejemplo independiente, pensado para abrirse fácilmente en local y servir como base para prácticas, explicaciones en clase o actividades autónomas.
 
 ## Estructura del repositorio
 
@@ -15,7 +15,7 @@ Archivos principales:
 
 ### `demo-analisis-activacion/`
 
-Contiene una demo web más completa basada en la misma pastelería sin gluten, pensada para trabajar recorridos de navegación, interés por producto y formularios de contacto.
+Contiene una demo web más completa basada en la misma pastelería sin gluten, pensada para trabajar recorridos de navegación, interés por producto, formularios de contacto y una primera aproximación a embudos y activación.
 
 Archivos principales:
 
@@ -25,3 +25,17 @@ Archivos principales:
 - `contacto.html`: página con formulario de contacto.
 - `productos/`: fichas individuales de los cinco productos.
 - `assets/`: estilos, script del sitio e imágenes de producto.
+- `README.md`: guía docente y explicación del caso.
+- `GUIA-GTM-GA4.md`: guía práctica para la implementación técnica con GTM y GA4.
+
+### `ejercicio-analisis-activacion/`
+
+Contiene un ejercicio autónomo para alumnado, basado en una landing promocional de un hoverboard retrofuturista. Está pensado para que el estudiante configure GTM y GA4 por su cuenta, valide eventos y plantee una lectura analítica básica del recorrido.
+
+Archivos principales:
+
+- `index.html`: landing principal del producto.
+- `specs.html`: página de especificaciones.
+- `waitlist.html`: formulario para unirse a la lista de espera.
+- `assets/`: estilos, script del sitio e imágenes del ejercicio.
+- `README.md`: enunciado y guía del ejercicio para alumnado.
