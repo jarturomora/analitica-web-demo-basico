@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de espera | HoverOne X</title>
+    <meta
+      name="description"
+      content="Formulario de lista de espera para acceder al lanzamiento de HoverOne X."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <!-- EJERCICIO GTM: pega aquí el bloque principal de Google Tag Manager dentro del <head>. -->
+
+    <!-- EJERCICIO GA4: si quieres usar GA4 sin GTM, este es el lugar para pegar la etiqueta base. -->
+
+    <script defer src="assets/site.js"></script>
+  </head>
+  <body data-page-type="waitlist">
+    <!-- EJERCICIO GTM: pega aquí el bloque <noscript> de Google Tag Manager justo después de abrir <body>. -->
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">HoverOne X</span>
+          <span class="brand-subtitle">El futuro personal de la movilidad, en edición limitada</span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="specs.html">Specs</a>
+          <a href="waitlist.html" aria-current="page">Lista de espera</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Acceso prioritario</span>
+          <h1>Entra en la lista de espera y adelántate al lanzamiento.</h1>
+          <p>
+            Déjanos tus datos para recibir acceso preferente a reservas, fechas
+            de lanzamiento y novedades de una edición pensada para los primeros
+            en despegar.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container split-grid">
+          <aside class="panel">
+            <span class="tag">Ventajas</span>
+            <ul class="contact-list">
+              <li>Información exclusiva sobre la fecha de lanzamiento.</li>
+              <li>Acceso anticipado a la primera ventana de reserva.</li>
+              <li>Novedades sobre versiones, packs y unidades limitadas.</li>
+            </ul>
+          </aside>
+
+          <div class="contact-shell">
+            <form
+              data-form-type="waitlist"
+              data-success-message="Gracias. Hemos recibido tu solicitud y te avisaremos en cuanto haya novedades."
+            >
+              <div class="form-grid">
+                <div class="field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="field">
+                  <label for="correo">Correo electrónico</label>
+                  <input
+                    id="correo"
+                    name="correo"
+                    type="email"
+                    placeholder="correo@ejemplo.com"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="pais">País</label>
+                  <input id="pais" name="pais" type="text" placeholder="España" />
+                </div>
+                <div class="field">
+                  <label for="interes">Interés principal</label>
+                  <select id="interes" name="interes">
+                    <option value="reserva">Reservar una unidad</option>
+                    <option value="info-tecnica">Recibir detalles técnicos</option>
+                    <option value="prueba">Acceso a una demo</option>
+                    <option value="novedades">Novedades del lanzamiento</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Cuéntanos qué te gustaría saber o por qué quieres estar entre los primeros."
+                  ></textarea>
+                </div>
+                <div class="field full">
+                  <label class="checkbox" for="consentimiento">
+                    <input id="consentimiento" name="consentimiento" type="checkbox" required />
+                    <span>Acepto recibir información sobre el lanzamiento y el acceso prioritario.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="hero-actions">
+                <button type="submit">Quiero acceso prioritario</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>HoverOne X | Solicitud de acceso a la primera edición.</span>
+        <span><a href="specs.html">Volver a especificaciones</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
