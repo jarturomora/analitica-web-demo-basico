@@ -1,57 +1,62 @@
-# Ejercicio de análisis y activación
+# Ejercicio de análisis del lanzamiento de HoverOne X
 
-## Contexto
+## Objetivos
 
-En este ejercicio trabajaremos con una landing page promocional dedicada al lanzamiento de un nuevo hoverboard inspirado en el imaginario clásico de la ciencia ficción. El sitio incluye una portada, una página de especificaciones y un formulario para unirse a la lista de espera.
+A través de este ejercicio vas a poner en práctica los conceptos fundamentales del tema en un escenario próximo a una situación real de negocio. Trabajarás sobre una landing promocional diseñada para presentar un nuevo producto, profundizar en sus especificaciones y captar usuarios interesados mediante una lista de espera.
 
-La práctica está pensada para que el estudiante configure la medición con Google Tag Manager (GTM) y Google Analytics 4 (GA4), observe el comportamiento de los usuarios y sea capaz de interpretar el recorrido digital desde una perspectiva de negocio.
+Con esta actividad se pretende que seas capaz de:
 
-## Objetivo del ejercicio
+- interpretar cómo un objetivo comercial puede traducirse en una estructura básica de medición;
+- diferenciar entre eventos informativos, eventos de interacción y señales más próximas a la conversión;
+- revisar una implementación visible desde el navegador para comprobar si responde a una lógica razonable de analítica digital;
+- y proponer una lectura inicial del comportamiento del usuario a partir de los datos recogidos.
 
-El objetivo principal es transformar una navegación sencilla en una oportunidad de análisis. Para ello, el estudiante deberá:
+## Contexto del caso
 
-- insertar correctamente GTM en el sitio,
-- configurar GA4 a través de GTM,
-- validar los eventos enviados al `dataLayer`,
-- identificar el recorrido del usuario,
-- y plantear una lectura analítica del comportamiento observado.
+El escenario de negocio al que te enfrentas en esta práctica es el siguiente. Una marca ficticia quiere lanzar al mercado un nuevo hoverboard llamado `HoverOne X`, presentado como una pieza tecnológica de edición limitada con una estética claramente retrofuturista. La empresa no pretende vender el producto de forma inmediata desde la web, sino generar expectación, despertar interés y reunir usuarios potencialmente dispuestos a reservar acceso prioritario al lanzamiento.
+
+Para ello, el sitio se organiza en tres momentos claramente diferenciados. En primer lugar, una página principal presenta el producto y su propuesta de valor. A continuación, una página de especificaciones permite profundizar en sus prestaciones y características. Por último, una página de lista de espera ofrece al usuario la posibilidad de dejar sus datos y manifestar su interés de manera más explícita.
+
+La pregunta clave no es solo si la web recibe visitas, sino qué comportamientos reflejan un avance real hacia una oportunidad de negocio. No tiene el mismo valor visitar la portada que consultar las especificaciones, hacer clic en una llamada a la acción o comenzar a rellenar el formulario. La finalidad del ejercicio consiste precisamente en ordenar esa lectura y convertirla en una estructura básica de medición.
 
 ## Estructura del sitio
 
 El ejercicio incluye los siguientes archivos:
 
-- `index.html`: landing principal del producto.
-- `specs.html`: página de especificaciones del hoverboard.
-- `waitlist.html`: formulario para solicitar acceso a la lista de espera.
-- `assets/styles.css`: estilos del sitio.
-- `assets/site.js`: lógica de eventos enviada al `dataLayer`.
-- `assets/hoverone-hero.webp`: imagen principal de la landing.
+- `index.html`: landing principal del producto;
+- `specs.html`: página de especificaciones del hoverboard;
+- `waitlist.html`: formulario para solicitar acceso a la lista de espera;
+- `assets/styles.css`: estilos del sitio;
+- `assets/site.js`: lógica de eventos enviada al `dataLayer`;
+- `assets/hoverone-hero.webp`: imagen principal de la landing;
 - `assets/hoverone-specs.webp`: imagen principal de la página de especificaciones.
 
 ## Preparación técnica
 
-El alumno debe localizar en cada página los comentarios que indican dónde insertar:
+El sitio ya está preparado para que puedas integrar Google Tag Manager y Google Analytics 4. En cada una de las páginas encontrarás comentarios en el código que indican dónde debes insertar:
 
-- el bloque principal de GTM dentro del `<head>`,
-- el bloque `noscript` de GTM justo después de abrir `<body>`,
+- el bloque principal de GTM dentro del `<head>`;
+- el bloque `noscript` de GTM justo después de abrir el `<body>`;
 - y, si fuera necesario, la etiqueta base de GA4.
+
+Esto te permitirá centrar la práctica no tanto en construir el sitio desde cero, sino en revisar y completar una estructura de medición coherente con el caso planteado.
 
 ## Tarea técnica
 
-El estudiante debe realizar los siguientes pasos:
+Para desarrollar el ejercicio, se recomienda seguir este orden:
 
-1. Crear un contenedor de GTM.
-2. Insertar el código de GTM en las tres páginas del sitio.
-3. Crear una propiedad de GA4.
-4. Configurar la etiqueta base de GA4 desde GTM.
-5. Crear variables de capa de datos para los parámetros enviados.
-6. Crear activadores de tipo `Custom Event`.
-7. Crear etiquetas de evento de GA4 para los eventos del ejercicio.
-8. Validar la implementación en modo Preview y en DebugView.
+1. crear un contenedor de GTM;
+2. insertar el código de GTM en las tres páginas del sitio;
+3. crear una propiedad de GA4;
+4. configurar la etiqueta base de GA4 desde GTM;
+5. crear variables de capa de datos para los parámetros enviados;
+6. crear activadores de tipo `Custom Event`;
+7. crear etiquetas de evento de GA4 para los eventos disponibles en el ejercicio;
+8. validar la implementación en modo Preview y en DebugView.
 
 ## Eventos disponibles
 
-El sitio ya envía al `dataLayer` los siguientes eventos:
+El archivo `assets/site.js` ya envía al `dataLayer` una serie de eventos que permiten observar distintos niveles de interés por parte del usuario. Los eventos implementados son los siguientes:
 
 - `view_specs`
 - `view_waitlist`
@@ -60,7 +65,7 @@ El sitio ya envía al `dataLayer` los siguientes eventos:
 - `select_waitlist_interest`
 - `form_submit`
 
-Parámetros que pueden recibirse:
+Además, la implementación envía algunos parámetros que enriquecen la lectura analítica:
 
 - `cta_name`
 - `cta_location`
@@ -70,30 +75,34 @@ Parámetros que pueden recibirse:
 
 ## Recorrido sugerido para validar la medición
 
-Para comprobar que la implementación funciona correctamente, se recomienda realizar esta navegación:
+Una vez integrada la capa técnica, conviene realizar una navegación sencilla pero intencionada para comprobar que la estructura de medición responde a lo esperado. El recorrido recomendado es este:
 
-1. Entrar en la página principal.
-2. Hacer clic en el botón de ver especificaciones.
-3. Navegar desde la página de especificaciones hacia la lista de espera.
-4. Comenzar a rellenar el formulario.
-5. Cambiar el campo de interés.
-6. Enviar el formulario.
+1. entrar en la página principal;
+2. hacer clic en el botón de ver especificaciones;
+3. navegar desde la página de especificaciones hacia la lista de espera;
+4. comenzar a rellenar el formulario;
+5. cambiar el campo de interés;
+6. enviar el formulario.
 
-## Preguntas de análisis
+Este flujo permite comprobar con claridad si los eventos aparecen en el orden esperado y si los parámetros aportan contexto útil para el análisis.
 
-Una vez configurada la medición, el estudiante debe intentar responder preguntas como estas:
+## Propuesta de lectura analítica
 
-- ¿Cuántos usuarios hacen clic en los CTA principales?
-- ¿Qué CTA parece empujar mejor al usuario hacia la lista de espera?
-- ¿Cuántos usuarios llegan a `waitlist.html`?
-- ¿Cuántos usuarios comienzan el formulario?
-- ¿Cuántos usuarios cambian el campo de interés?
-- ¿Cuántos usuarios terminan enviando el formulario?
-- ¿Dónde parece producirse la mayor pérdida dentro del recorrido?
+Una vez recogidos los datos, el siguiente paso consiste en interpretarlos con criterio. Algunas preguntas razonables para orientar esa lectura son las siguientes:
+
+- ¿cuántos usuarios hacen clic en las llamadas a la acción principales?;
+- ¿qué llamada a la acción parece empujar mejor al usuario hacia la lista de espera?;
+- ¿cuántos usuarios llegan realmente a `waitlist.html`?;
+- ¿cuántos comienzan el formulario?;
+- ¿cuántos cambian el campo de interés?;
+- ¿cuántos terminan enviando el formulario?;
+- ¿en qué punto del recorrido parece producirse la mayor pérdida?
+
+Estas preguntas ayudan a pasar de la mera observación de eventos a una interpretación orientada a negocio.
 
 ## Propuesta de embudo
 
-Una forma sencilla de estructurar el análisis es construir un embudo con estas etapas:
+Una forma sencilla de estructurar la práctica es construir un embudo con estas etapas:
 
 1. `cta_click`
 2. `view_specs` o `view_waitlist`
@@ -101,15 +110,17 @@ Una forma sencilla de estructurar el análisis es construir un embudo con estas 
 4. `select_waitlist_interest`
 5. `form_submit`
 
+Este embudo permite distinguir entre curiosidad inicial, interés más explícito y acción final.
+
 ## Entrega sugerida
 
-El estudiante puede entregar:
+La actividad puede entregarse en un documento breve en el que se recojan, al menos, los siguientes elementos:
 
-- una captura de la configuración en GTM,
-- una captura de la validación en Preview o DebugView,
-- una breve explicación de los eventos configurados,
+- una captura de la configuración en GTM;
+- una captura de la validación en Preview o DebugView;
+- una breve explicación de los eventos configurados;
 - y una interpretación final de lo que indican los datos.
 
 ## Idea clave del ejercicio
 
-La finalidad de esta práctica no es solo comprobar si los eventos funcionan, sino aprender a conectar la medición con preguntas reales de negocio. En este caso, el foco está en entender cómo una landing promocional puede conducir al usuario desde el descubrimiento del producto hasta la intención de compra.
+La finalidad de esta práctica no consiste únicamente en comprobar si los eventos funcionan, sino en aprender a relacionar la medición con preguntas reales de negocio. En este caso, el foco está en entender cómo una landing promocional puede conducir al usuario desde el descubrimiento del producto hasta una señal más valiosa de intención, como es el envío del formulario de acceso prioritario.
